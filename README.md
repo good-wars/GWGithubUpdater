@@ -1,4 +1,4 @@
-# GWGithubUpdater
+# GWGithubUpdater By AstroPowerX
 
 Приложение для обновления сборки GW!
 
