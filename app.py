@@ -15,12 +15,15 @@ VERSIONS = """{"mods": "0.0.0","config": "0.0.0","scripts": "0.0.0","hollowengin
 DIRS = ["mods", "config", "scripts", "hollowengine"]
 NAME = "GW Updater"
 GEOMETRY = "400x300"
+ICON = "_internal/GW.ico" 
 
 class UpdaterApp(ctk.CTk):
+
     def __init__(self):
         super().__init__()
         self.title(NAME)
         self.geometry(GEOMETRY)
+        self.after(10, lambda: self.iconbitmap(ICON))
         
         self.dir_path = ""
         self.create_app_settings()
