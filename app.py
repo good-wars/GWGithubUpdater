@@ -102,7 +102,7 @@ class UpdaterApp(ctk.CTk):
         if response.status_code == 200:
             zip_path = f'{self.dir_path}/{dir_name}.zip'
             total_size = int(response.headers.get('content-length', 0))
-            block_size = 65536
+            block_size = 32768
             written = 0
             start_time = time.time()
             
