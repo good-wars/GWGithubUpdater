@@ -15,12 +15,15 @@ VERSIONS = """{"mods": "0.0.0","config": "0.0.0","scripts": "0.0.0","hollowengin
 DIRS = ["mods", "config", "scripts", "hollowengine"]
 NAME = "GW Updater"
 GEOMETRY = "400x300"
+ICON = "GW.ico" 
 
 class UpdaterApp(ctk.CTk):
+
     def __init__(self):
         super().__init__()
         self.title(NAME)
         self.geometry(GEOMETRY)
+        self.after(10, lambda: self.iconbitmap(ICON))
         
         self.dir_path = ""
         self.create_app_settings()
@@ -134,5 +137,10 @@ class UpdaterApp(ctk.CTk):
             json.dump(versions, f)
 
 if __name__ == "__main__":
-    app = UpdaterApp()
-    app.mainloop()
+    try:
+        app = UpdaterApp()
+        app.mainloop()
+    except Exception as e:
+        import traceback
+        with open("error_log.txt", "w") as f:
+            f.write(str(e) + "\n" + traceback.format_exc())
