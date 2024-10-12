@@ -13,12 +13,14 @@ GITHUB_URL = 'https://github.com/good-wars/WorldChanges/raw/refs/heads/main/'
 APPSETTINGS = """{"filesDir": ""}"""
 VERSIONS = """{"mods": "0.0.0","config": "0.0.0","scripts": "0.0.0","hollowengine": "0.0.0"}"""
 DIRS = ["mods", "config", "scripts", "hollowengine"]
+NAME = "GW Updater"
+GEOMETRY = "400x300"
 
 class UpdaterApp(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("GW Updater")
-        self.geometry("400x300")
+        self.title(NAME)
+        self.geometry(GEOMETRY)
         
         self.dir_path = ""
         self.create_app_settings()

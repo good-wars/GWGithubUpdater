@@ -17,6 +17,8 @@
    APPSETTINGS = """{"filesDir": ""}"""
    VERSIONS = """{"mods": "0.0.0","config": "0.0.0","scripts": "0.0.0","hollowengine": "0.0.0"}"""
    DIRS = ["mods", "config", "scripts", "hollowengine"]
+   NAME = "GW Updater"
+   GEOMETRY = "400x300"
    ```
    Там измените
    `GITHUB_URL = '<Своя ссылка>'`
@@ -36,3 +38,5 @@
    ![1728747671563](images/README/1728747671563.png)
    Что-бы получилось так после установки:
    ![1728747774736](images/README/1728747774736.png)
+5. `NAME = "<Имя окна>"`
+6. `GEOMETRY = "<Ширина>x<Высота>"`
